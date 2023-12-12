@@ -2,6 +2,19 @@ import streamlit as st
 import random
 import os
 
+st.set_page_config(
+        page_title="Juego de piedra, papel o tijeras",
+        page_icon="🧊",
+        layout="wide",
+        initial_sidebar_state="expanded",
+        menu_items={
+            'Get help': 'https://github.com/vicogarcia16/',
+            'About': """##### Disfruta esta aplicación extremadamente divertida! \n
+            Creada por Víctor Garcia \n"""
+        }
+    )
+
+    
 opciones = ["piedra", "papel", "tijera"]
 
 if "user_score" not in st.session_state:
@@ -9,7 +22,7 @@ if "user_score" not in st.session_state:
 if "computer_score" not in st.session_state:
     st.session_state.computer_score = 0
 
-st.markdown("<h1 style='text-align: center;'>Juego de piedra papel y tijera</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>Juego de piedra, papel o tijeras</h1>", unsafe_allow_html=True)
 col = st.columns([1, 5, 10, 5.5])
 user_option = col[2].selectbox("Elige tu opción", opciones)
 colum = st.columns([1, 5, 10])
