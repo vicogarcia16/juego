@@ -10,7 +10,7 @@ if "computer_score" not in st.session_state:
     st.session_state.computer_score = 0
 
 st.markdown("<h1 style='text-align: center;'>Juego de piedra papel o tijeras</h1>", unsafe_allow_html=True)
-col = st.columns([1, 5, 10, 5.5])
+col = st.columns([1, 4.5, 11, 5.5])
 user_option = col[2].selectbox("Elige tu opción", opciones)
 colum = st.columns([1, 5, 10])
 st.write("")
